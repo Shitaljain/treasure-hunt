@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script defer src="firebase.js"></script>
+  <script defer src="leaderboard.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title" style="text-align:center;margin-top:14px;">🏆 Treasure Hunt Leaderboard</h1>
+    <div class="leaderboard-container">
+      <ol id="list" class="leaderboard-list"></ol>
+    </div>
+    <p style="text-align:center;margin-top:10px;"><a href="map.html" style="color:var(--gold)">Back to map</a></p>
+  </div>
+</body>
+</html>

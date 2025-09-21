@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Treasure Hunt — Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- html5-qrcode -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.7/minified/html5-qrcode.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script defer src="firebase.js"></script>
+  <script defer src="map.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <button onclick="location.href='leaderboard.html'">🏆 Leaderboard</button>
+    <div id="teamLabel" style="margin-left:auto; font-weight:700;"></div>
+    <button id="shareBtn">Start location</button>
+    <button id="scanBtn">Scan QR</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div id="map" style="height: calc(100vh - 56px);"></div>
+
+  <!-- QR scanner overlay -->
+  <div id="qrScanner" style="display:none; position:fixed; inset:10px; z-index:9999; background:#111; padding:8px; border-radius:8px;">
+    <div id="reader" style="width:100%"></div>
+    <button onclick="stopScanner()" style="margin-top:8px;padding:8px;border-radius:8px;">Close</button>
+  </div>
+</body>
+</html>

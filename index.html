@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Treasure Hunt — Join</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase v8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script defer src="firebase.js"></script>
+  <script defer src="index.js"></script>
+</head>
+<body class="treasure-bg">
+  <div class="login-card container">
+    <h1 class="title">🏴‍☠️ University Treasure Hunt</h1>
+    <p class="subtitle">Enter your team name to begin the adventure!</p>
+
+    <input id="teamName" class="input-box" placeholder="Team name (e.g., The Explorers)" />
+    <button id="joinBtn" class="start-btn">Start Adventure</button>
+    <p style="margin-top:10px;color:#efe6c8;">Already joined? <a href="map.html" style="color:var(--gold);font-weight:700">Open map</a></p>
+  </div>
+</body>
+</html>
